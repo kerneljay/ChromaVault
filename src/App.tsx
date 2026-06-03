@@ -769,7 +769,7 @@ const App: React.FC = () => {
             </div>
           </div>
           <div className="ctrl-section ctrl-shapes">
-            {harmonyShapes.map(({ key, label, count }) => {
+            {harmonyShapes.map(({ key, _, count }) => {
               const Icon = ShapeIcons[key];
               return (
                 <button key={key} className={`shape-pill ${harmonyShape === key ? 'active' : ''}`} onClick={() => setHarmonyShape(key)}>
