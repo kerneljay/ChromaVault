@@ -390,7 +390,6 @@ const App: React.FC = () => {
   const copyMenuRef = useRef<HTMLDivElement>(null);
   const [lastDragKey, setLastDragKey] = useState<ColorKey>('primary');
   const gradientCanvasRef = useRef<HTMLCanvasElement | null>(null);
-  const animationRef = useRef<number>();
   const mousePos = useRef({ x: 0.5, y: 0.5 });
   const targetPos = useRef({ x: 0.5, y: 0.5 });
 
