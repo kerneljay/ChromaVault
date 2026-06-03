@@ -965,7 +965,12 @@ const App: React.FC = () => {
                 <div
                   key={key}
                   className={`swatch-chip ${empty ? 'empty' : ''}`}
-                  onClick={() => empty ? null : navigator.clipboard.writeText(hex) && showToast(`${hex.toUpperCase()} copied`)}
+                  onClick={async () => {
+                    if (!empty) {
+                      await navigator.clipboard.writeText(hex);
+                      showToast(`${hex.toUpperCase()} copied`);
+                    }
+                  }}
                   title={empty ? undefined : `Click to copy ${hex}`}
                 >
                   <div className="chip-color" style={{ background: empty ? '#222' : hex }} />
