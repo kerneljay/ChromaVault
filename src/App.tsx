@@ -532,8 +532,8 @@ const App: React.FC = () => {
 
   const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(''), 2200); };
 
-  const handleColorChange = (key: keyof typeof colors, val: string) =>
-    setColors(prev => ({ ...prev, [key]: val }));
+  // const handleColorChange = (key: keyof typeof colors, val: string) =>
+  //   setColors(prev => ({ ...prev, [key]: val }));
 
   const [lastDragKey, setLastDragKey] = useState<ColorKey>('primary');
 
